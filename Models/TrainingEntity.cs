@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GymWebAPI.Models
 {
-    public class TrainingEntity : Entity
+    public class TrainingEntity : BusinessEntity
     {
         public string Name { get; set; }
         public int Schedules { get; set; }

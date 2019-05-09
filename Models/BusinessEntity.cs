@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GymWebAPI.Models
 {
-    public class Entity
+    public class BusinessEntity
     {
         public Guid Id { get; set; }
     }

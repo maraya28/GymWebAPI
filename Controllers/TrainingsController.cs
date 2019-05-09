@@ -1,6 +1,9 @@
-﻿using GymWebAPI.Models;
+﻿using GymWebAPI.Data;
+using GymWebAPI.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using GymWebAPI.Data;
+using System;
+using System.Linq;
 
 namespace GymWebAPI.Controllers
 {
@@ -11,16 +14,25 @@ namespace GymWebAPI.Controllers
 
         public TrainingsController(IRepository<TrainingEntity> repository)
         {
-            _repository = repository;       
+            _repository = repository;
         }
+             
 
-       
-        public object Get()
+        public IActionResult Get()
         {
 
-            _repository.Add(new TrainingEntity());
+            try
+            {
+                var result = _repository.GetAll();
+                return Ok(result.ToList());
+            }
+            catch (Exception e)
+            {
 
-            return new { Name = "Test" };
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+                      
         }
+
     }
 }

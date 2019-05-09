@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace GymWebAPI.Data
 {
-    public interface IRepository<T> where T : Entity
+    public interface IRepository<T> where T : BusinessEntity
     {
+        IEnumerable<T> GetAll();
         void Add(T entity);
         void Delete(T entity);
         bool Save();
