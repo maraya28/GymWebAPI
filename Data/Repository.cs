@@ -10,19 +10,16 @@ namespace GymWebAPI.Data
     public class Repository<T> : IRepository<T> where T : BusinessEntity
     {
         private readonly GymContext _context;
-        private DbSet<T> _table;
 
         public Repository(GymContext context)
         {
             _context = context;
-            _table = _context.Set<T>();
         }
 
         public IEnumerable<T> GetAll()
         {
-            return _table.ToList();
+            return _context.Set<T>().ToList();
         }
-
 
         public void Add(T entity)
         {
@@ -33,8 +30,6 @@ namespace GymWebAPI.Data
         {
             _context.Remove(entity);
         }
-
-
 
         public bool Save()
         {
