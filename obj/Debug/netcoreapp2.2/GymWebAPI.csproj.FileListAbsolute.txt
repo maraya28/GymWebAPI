@@ -3,7 +3,6 @@ C:\Users\PC\source\repos\GymWebAPI\bin\Debug\netcoreapp2.2\GymWebAPI.runtimeconf
 C:\Users\PC\source\repos\GymWebAPI\bin\Debug\netcoreapp2.2\GymWebAPI.runtimeconfig.dev.json
 C:\Users\PC\source\repos\GymWebAPI\bin\Debug\netcoreapp2.2\GymWebAPI.dll
 C:\Users\PC\source\repos\GymWebAPI\bin\Debug\netcoreapp2.2\GymWebAPI.pdb
-C:\Users\PC\source\repos\GymWebAPI\obj\Debug\netcoreapp2.2\GymWebAPI.csprojAssemblyReference.cache
 C:\Users\PC\source\repos\GymWebAPI\obj\Debug\netcoreapp2.2\GymWebAPI.csproj.CoreCompileInputs.cache
 C:\Users\PC\source\repos\GymWebAPI\obj\Debug\netcoreapp2.2\GymWebAPI.RazorAssemblyInfo.cache
 C:\Users\PC\source\repos\GymWebAPI\obj\Debug\netcoreapp2.2\GymWebAPI.RazorAssemblyInfo.cs
