@@ -1,5 +1,6 @@
 ﻿using GymWebAPI.Data;
 using GymWebAPI.Models;
+using GymWebAPI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +25,7 @@ namespace GymWebAPI
 
             services.AddDbContext<GymContext>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IMemberService), typeof(MemberService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
