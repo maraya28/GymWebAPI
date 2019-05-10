@@ -16,22 +16,25 @@ namespace GymWebAPI.Controllers
         {
             _repository = repository;
         }
-             
 
         public IActionResult Get()
         {
 
             try
             {
-                var result = _repository.GetAll();
-                return Ok(result.ToList());
+                var result = _repository.GetAll().Select(_ => new
+                {
+                    name = _.Name,
+                    instructor = _.Instructor
+                });
+                return Ok(result);
             }
             catch (Exception e)
             {
-
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                                  e.InnerException);
             }
-                      
+
         }
 
     }
