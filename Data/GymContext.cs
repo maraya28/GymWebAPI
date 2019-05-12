@@ -18,24 +18,15 @@ namespace GymWebAPI.Data
         }
 
         public DbSet<TrainingEntity> Trainings { get; set; }
-
+        public DbSet<MemberEntity> Members { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           optionsBuilder.UseSqlServer(_config.GetConnectionString("GymCore"));
+            optionsBuilder.UseSqlServer(_config.GetConnectionString("GymCore"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TrainingEntity>()
-           .HasData(new
-           {
-               Id = Guid.NewGuid(),
-               Name = "Fitness",
-               Instructor = "Javier",
-               Schedules = 10
-           });
-
             base.OnModelCreating(modelBuilder);
         }
 

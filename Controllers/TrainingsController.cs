@@ -10,19 +10,18 @@ namespace GymWebAPI.Controllers
     [Route("api/[controller]")]
     public class TrainingsController : ControllerBase
     {
-        private IRepository<TrainingEntity> _repository;
+        private IRepository<TrainingEntity> _trainings;
 
-        public TrainingsController(IRepository<TrainingEntity> repository)
+        public TrainingsController(IRepository<TrainingEntity> trainings)
         {
-            _repository = repository;
+            _trainings = trainings;
         }
 
         public IActionResult Get()
         {
-
             try
             {
-                var result = _repository.GetAll().Select(_ => new
+                var result = _trainings.GetAll().Select(_ => new
                 {
                     name = _.Name,
                     instructor = _.Instructor
