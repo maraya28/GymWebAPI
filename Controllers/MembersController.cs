@@ -54,8 +54,21 @@ namespace GymWebAPI.Controllers
                 return StatusCode(StatusCodes.Status400BadRequest, 
                                   "The member Id is incorrect.");
             }
+        }
 
-          
+        [HttpPost]
+        public IActionResult Post([FromBody] MemberEntity member)
+        {
+            try
+            {
+                _members.Add(member);
+                return Ok(member);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest, 
+                                  e.Message);
+            }
         }
     }
 }

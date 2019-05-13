@@ -24,6 +24,8 @@ namespace GymWebAPI.Data
         public void Add(T entity)
         {
             _context.Add(entity);
+            _context.Entry(entity).State = EntityState.Added;
+            Save();
         }
 
         public void Delete(T entity)
@@ -31,9 +33,17 @@ namespace GymWebAPI.Data
             _context.Remove(entity);
         }
 
-        public bool Save()
+        public void Update(T entity)
         {
-            return _context.SaveChanges() > 0;
+            _context.Attach(entity);
+            _context.Entry(entity).State = EntityState.Modified;
         }
+
+        public void Save()
+        {
+            _context.SaveChanges();
+        }
+
+
     }
 }
