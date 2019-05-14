@@ -51,7 +51,7 @@ namespace GymWebAPI.Controllers
             }
             catch
             {
-                return StatusCode(StatusCodes.Status400BadRequest, 
+                return StatusCode(StatusCodes.Status400BadRequest,
                                   "The member Id is incorrect.");
             }
         }
@@ -66,9 +66,28 @@ namespace GymWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status400BadRequest, 
+                return StatusCode(StatusCodes.Status400BadRequest,
                                   e.Message);
             }
         }
+
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(Guid id)
+        {
+            try
+            {
+                var member = _members.GetAll().Single(_ => _.Id == id);
+                _members.Delete(member);
+                _members.Save();
+                return Ok($"The {member.Name} member was deleted.");
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest,
+                                  e.Message);
+            }
+        }
+
     }
 }
