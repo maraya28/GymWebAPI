@@ -52,7 +52,7 @@ namespace GymWebAPI.Controllers
             catch
             {
                 return StatusCode(StatusCodes.Status400BadRequest,
-                                  "The member Id is incorrect.");
+                                  "The entered member ID does't exist.");
             }
         }
 
@@ -62,6 +62,22 @@ namespace GymWebAPI.Controllers
             try
             {
                 _members.Add(member);
+                return Ok(member);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest,
+                                  e.Message);
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Put(Guid id, [FromBody] MemberEntity member)
+        {
+            try
+            {
+                _service.ValidateMember(id);
+                _members.Update(member);
                 return Ok(member);
             }
             catch (Exception e)
@@ -88,6 +104,5 @@ namespace GymWebAPI.Controllers
                                   e.Message);
             }
         }
-
     }
 }
