@@ -23,12 +23,11 @@ namespace GymWebAPI.Tests
             Target = new MemberService(_members.Object);
         }
 
-
         [TestClass]
         public class ValidateMemberMethod : MemberServiceTest
         {
-            [TestMethod]
-            public void Test()
+            [TestMethod, ExpectedException(typeof(KeyNotFoundException))]
+            public void It_throws_an_error_when_the_member_doesnt_exist()
             {
                 _members.Setup(_ => _.GetAll()).Throws(new Exception());
                 var id = Guid.Parse("C56A4180-65AA-42EC-A945-5FD21DEC0538");
