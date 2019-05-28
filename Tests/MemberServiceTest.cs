@@ -13,7 +13,6 @@ namespace GymWebAPI.Tests
     public class MemberServiceTest : TestBaseClass<MemberService>
     {
         protected Mock<IRepository<MemberEntity>> _members;
-       
 
         [TestInitialize]
         public override void Initialize()
@@ -26,10 +25,26 @@ namespace GymWebAPI.Tests
         [TestClass]
         public class ValidateMemberMethod : MemberServiceTest
         {
-            [TestMethod, ExpectedException(typeof(KeyNotFoundException))]
-            public void It_throws_an_error_when_the_member_doesnt_exist()
+            [TestMethod]
+            public void The_input_member_Exist()
             {
-                _members.Setup(_ => _.GetAll()).Throws(new Exception());
+                var results = new List<MemberEntity>()
+                {
+                    new MemberEntity.Builder().SetFields(Guid.Parse("C56A4180-65AA-42EC-A945-5FD21DEC0538"),
+                                                         "Carlos Segura",
+                                                          new DateTime(1986,06,12),
+                                                          1).Build()
+                };
+                _members.Setup(_ => _.GetAll()).Returns(results);
+
+                var id = Guid.Parse("C56A4180-65AA-42EC-A945-5FD21DEC0538");
+                Target.ValidateMember(id);
+            }
+
+            [TestMethod, ExpectedException(typeof(KeyNotFoundException))]
+            public void It_throws_an_error_when_there_is_no_members_loaded()
+            {
+                _members.Setup(_ => _.GetAll()).Returns(default(List<MemberEntity>));
                 var id = Guid.Parse("C56A4180-65AA-42EC-A945-5FD21DEC0538");
 
                 Target.ValidateMember(id);

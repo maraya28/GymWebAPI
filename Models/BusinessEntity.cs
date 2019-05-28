@@ -4,6 +4,12 @@ namespace GymWebAPI.Models
 {
     public abstract class BusinessEntity
     {
-        public Guid Id { get; private set; }
+        protected BusinessEntity()
+        {
+
+        }
+
+        public Guid Id { get; protected set; }
+
     }
 }

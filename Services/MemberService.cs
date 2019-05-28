@@ -16,20 +16,15 @@ namespace GymWebAPI.Services
             _members = members;
         }
 
-
         public void ValidateMember(Guid memberId)
         {
-            try
-            {
-                _members.GetAll().Any(_ => _.Id == memberId);
-            }
-            catch
-            {
-                throw new KeyNotFoundException("The member to update does't exist.");
-            }
+            var exists = false;
+            var members = _members.GetAll();
+            if (members != default)
+                exists = members.Any(_ => _.Id == memberId);
+            if (exists) return;
+            throw new KeyNotFoundException("The member to update does't exist.");
         }
-
-
 
         public int Applydiscount(Guid memberId)
         {
@@ -37,6 +32,6 @@ namespace GymWebAPI.Services
             return 0;
         }
 
-       
+
     }
 }
