@@ -30,7 +30,7 @@ namespace GymWebAPI.Controllers
                 {
                     name = _.Name,
                     birthDate = _.BirthDate,
-                    seniority = _.Seniority
+                    seniority = Enum.GetName(typeof(SeniorityType), _.Seniority)
                 });
                 return Ok(results);
             }

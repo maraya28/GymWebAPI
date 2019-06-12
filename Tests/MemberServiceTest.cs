@@ -33,7 +33,7 @@ namespace GymWebAPI.Tests
                     new MemberEntity.Builder().SetFields(Guid.Parse("C56A4180-65AA-42EC-A945-5FD21DEC0538"),
                                                          "Carlos Segura",
                                                           new DateTime(1986,06,12),
-                                                          1).Build()
+                                                          SeniorityType.Junior).Build()
                 };
                 _members.Setup(_ => _.GetAll()).Returns(results);
 
