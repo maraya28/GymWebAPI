@@ -1,12 +1,11 @@
 ﻿using GymWebAPI.Data;
 using GymWebAPI.Models;
 using GymWebAPI.Services;
+using GymWebAPI.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace GymWebAPI.Controllers
 {
@@ -57,11 +56,12 @@ namespace GymWebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] MemberEntity member)
+        public IActionResult Post([FromBody] MemberViewModel member)
         {
             try
             {
-                _members.Add(member);
+                var entity = member.ToEnity();
+                _members.Add(entity);
                 return Ok(member);
             }
             catch (Exception e)
