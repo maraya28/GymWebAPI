@@ -62,7 +62,7 @@ namespace GymWebAPI.Controllers
             {
                 var entity = member.ToEnity();
                 _members.Add(entity);
-                return Ok(member);
+                return Ok(entity);
             }
             catch (Exception e)
             {
