@@ -72,12 +72,15 @@ namespace GymWebAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(Guid id, [FromBody] MemberEntity member)
+        public IActionResult Put(Guid id, [FromBody] MemberViewModel member)
         {
             try
             {
                 _service.ValidateMember(id);
-                _members.Update(member);
+                var entity = _members.GetAll().Single(_ => _.Id == id);
+                var updated = member.ToEnity(entity);
+                _members.Update(updated);
+                _members.Save();
                 return Ok(member);
             }
             catch (Exception e)

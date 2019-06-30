@@ -27,6 +27,11 @@ namespace GymWebAPI.Models
                 _instance = new MemberEntity();
             }
 
+            public Builder(MemberEntity member)
+            {
+                _instance = member;
+            }
+            
             public Builder SetFields(Guid id, string name, DateTime birthDate, SeniorityType seniority)
             {
                 _instance.Id = id;
@@ -35,6 +40,15 @@ namespace GymWebAPI.Models
                 _instance.Seniority = seniority;
                 return this;
             }
+
+            public Builder SetFields(string name, DateTime birthDate, SeniorityType seniority)
+            {
+                _instance.Name = name;
+                _instance.BirthDate = birthDate;
+                _instance.Seniority = seniority;
+                return this;
+            }
+
 
             public MemberEntity Build()
             {

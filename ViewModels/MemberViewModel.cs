@@ -17,5 +17,14 @@ namespace GymWebAPI.ViewModels
                                                         BirthDate,
                                                         Seniority).Build();
         }
+
+
+        public MemberEntity ToEnity(MemberEntity entity)
+        {
+            return new MemberEntity.Builder(entity).SetFields(Name,
+                                                              BirthDate,
+                                                              Seniority).Build();
+        }
+
     }
 }
