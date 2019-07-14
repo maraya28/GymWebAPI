@@ -11,5 +11,22 @@ namespace GymWebAPI.Controllers
         {
             return View();
         }
+
+
+        [HttpGet]
+        [Route("Home/api/gym")]
+        public IActionResult Gym()
+        {
+            var result = new
+            {
+                name = "Gym API",
+                address = "Mendoza 452 Rosario, Santa Fe, Argentina.",
+                phoneNumber = "+54 (341) 000 0000 00",
+                email = "gymapi@hotmail.com",
+                webSite = "gymapi.com.ar"
+            };
+            return Ok(result);
+
+        }
     }
 }
