@@ -15,6 +15,6 @@ namespace GymWebAPI.Models
 
         public DayOfWeek Day { get; private set; }
         public TimeSpan Hour { get; private set; }
-        public string Hourformat => $"{Hour.Hours} : {Hour.Minutes.ToString()} Hs";
+        public string HourFormat => $"{Hour.Hours.ToString("00")}:{Hour.Minutes.ToString("00")} Hs";
     }
 }
