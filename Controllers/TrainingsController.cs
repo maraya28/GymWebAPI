@@ -31,7 +31,7 @@ namespace GymWebAPI.Controllers
                     schedules = schedules.Where(s => s.TrainingId == _.Id).Select(d => new
                     {
                         Day = Enum.GetName(typeof(DayOfWeek), d.Day),
-                        Hours = d.HourFormat
+                        Hour = d.HourFormat
                     })
                 });
                 return Ok(result);
