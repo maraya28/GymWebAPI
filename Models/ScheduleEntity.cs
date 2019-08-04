@@ -5,16 +5,20 @@ using System.Threading.Tasks;
 
 namespace GymWebAPI.Models
 {
-    public class ScheduleEntity 
+    public class ScheduleEntity : BusinessEntity
     {
-        public ScheduleEntity(DayOfWeek day, int hours, int minutes)
+        public ScheduleEntity(Guid trainingId, DayOfWeek day, int hours, int minutes)
         {
+            TrainingId = trainingId;
             Day = day;
-            Hour = new TimeSpan(hours, minutes, 0);
+            Hours = hours;
+            Minutes = minutes;
         }
 
-        public DayOfWeek Day { get; private set; }
-        public TimeSpan Hour { get; private set; }
-        public string HourFormat => $"{Hour.Hours.ToString("00")}:{Hour.Minutes.ToString("00")} Hs";
+        public Guid TrainingId { get; set; }
+        public DayOfWeek Day { get; set; }
+        public int Hours { get; set; }
+        public int Minutes { get; set; }
+        public string HourFormat => $"{Hours.ToString("00")}:{Minutes.ToString("00")} Hs";
     }
 }

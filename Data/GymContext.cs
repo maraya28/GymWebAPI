@@ -19,6 +19,7 @@ namespace GymWebAPI.Data
 
         public DbSet<TrainingEntity> Trainings { get; set; }
         public DbSet<MemberEntity> Members { get; set; }
+        public DbSet<ScheduleEntity> Schedules { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
