@@ -1,5 +1,6 @@
 ﻿using GymWebAPI.Data;
 using GymWebAPI.Models;
+using GymWebAPI.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,28 +13,20 @@ namespace GymWebAPI.Controllers
     {
         private IRepository<TrainingEntity> _trainings;
         private IRepository<ScheduleEntity> _schedules;
+        protected ITrainingService _service;
 
-        public TrainingsController(IRepository<TrainingEntity> trainings, IRepository<ScheduleEntity> schedules)
+        public TrainingsController(IRepository<TrainingEntity> trainings, IRepository<ScheduleEntity> schedules, ITrainingService service)
         {
             _trainings = trainings;
             _schedules = schedules;
+            _service = service;
         }
 
         public IActionResult Get()
         {
             try
             {
-                var schedules = _schedules.GetAll().ToList();
-                var result = _trainings.GetAll().Select(_ => new
-                {
-                    name = _.Name,
-                    description = _.Description,
-                    schedules = schedules.Where(s => s.TrainingId == _.Id).Select(d => new
-                    {
-                        Day = Enum.GetName(typeof(DayOfWeek), d.Day),
-                        Hour = d.HourFormat
-                    })
-                });
+                var result = _service.GetAll();
                 return Ok(result);
             }
             catch (Exception e)

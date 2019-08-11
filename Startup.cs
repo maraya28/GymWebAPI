@@ -26,6 +26,7 @@ namespace GymWebAPI
             services.AddDbContext<GymContext>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(typeof(IMemberService), typeof(MemberService));
+            services.AddScoped(typeof(ITrainingService), typeof(TrainingService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
