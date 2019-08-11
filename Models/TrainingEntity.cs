@@ -13,6 +13,6 @@ namespace GymWebAPI.Models
         }
 
         public string Name { get; set; }
-        public string Instructor { get; set; }
+        public string Description { get; set; }
     }
 }

@@ -27,7 +27,7 @@ namespace GymWebAPI.Controllers
                 var result = _trainings.GetAll().Select(_ => new
                 {
                     name = _.Name,
-                    instructor = _.Instructor,
+                    description = _.Description,
                     schedules = schedules.Where(s => s.TrainingId == _.Id).Select(d => new
                     {
                         Day = Enum.GetName(typeof(DayOfWeek), d.Day),
@@ -41,8 +41,35 @@ namespace GymWebAPI.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError,
                                   e.Message);
             }
-
         }
+
+
+        [HttpGet("{id}")]
+        public IActionResult Get(Guid id)
+        {
+            try
+            {
+                var schedules = _schedules.GetAll().ToList();
+                var training = _trainings.GetAll().Single(_ => _.Id == id);
+                var result = new 
+                {
+                    name = training.Name,
+                    description = training.Description,
+                    schedules = schedules.Where(s => s.TrainingId == training.Id).Select(d => new
+                    {
+                        Day = Enum.GetName(typeof(DayOfWeek), d.Day),
+                        Hour = d.HourFormat
+                    })
+                };
+                return Ok(result);
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status400BadRequest,
+                                  "The entered Training ID does't exist.");
+            }
+        }
+
 
     }
 }
