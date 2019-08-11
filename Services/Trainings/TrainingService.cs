@@ -22,11 +22,9 @@ namespace GymWebAPI.Services
 
         public List<TrainingViewModel> GetAll()
         {
-            var trainings = _trainings.GetAll();
-            var schedules = _schedules.GetAll();
             var result = new List<TrainingViewModel>();
-
-            foreach (var t in trainings)
+            var schedules = _schedules.GetAll();
+            _trainings.GetAll().ToList().ForEach(t =>
             {
                 var vm = new TrainingViewModel
                 {
@@ -34,14 +32,14 @@ namespace GymWebAPI.Services
                     Description = t.Description,
                     Schedules = new List<ScheduleViewModel>()
                 };
-
-                foreach (var s in schedules.Where(s => s.TrainingId == t.Id))
+                schedules.Where(s => s.TrainingId == t.Id).ToList().ForEach(_ =>
                 {
-                    vm.Schedules.Add(new ScheduleViewModel(Enum.GetName(typeof(DayOfWeek), s.Day),
-                                         s.HourFormat));
-                }
+                    vm.Schedules.Add(new ScheduleViewModel(Enum.GetName(typeof(DayOfWeek),
+                                                           _.Day),
+                                                           _.HourFormat));
+                });
                 result.Add(vm);
-            }
+            });
             return result;
         }
     }
