@@ -63,6 +63,17 @@ namespace GymWebAPI.Controllers
             }
         }
 
+        [HttpPost]
+        public IActionResult Add()
+        {
+            return default;
+        }
 
+
+        [HttpPost]
+        public IActionResult AddSchedules()
+        {
+            return default;
+        }
     }
 }
