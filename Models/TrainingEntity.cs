@@ -7,12 +7,13 @@ namespace GymWebAPI.Models
 {
     public class TrainingEntity : BusinessEntity
     {
-        public TrainingEntity()
+        public TrainingEntity(string name, string description)
         {
-           
+            Name = name;
+            Description = description;
         }
 
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string Name { get; private set; }
+        public string Description { get; private set; }
     }
 }

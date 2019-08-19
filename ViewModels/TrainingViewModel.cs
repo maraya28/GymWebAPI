@@ -11,5 +11,10 @@ namespace GymWebAPI.ViewModels
         public string Name { get; set; }
         public string Description { get; set; }
         public List<ScheduleViewModel> Schedules { get; set; }
+
+        public TrainingEntity ToEnity()
+        {
+            return new TrainingEntity(Name, Description);
+        }
     }
 }

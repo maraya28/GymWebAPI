@@ -1,6 +1,7 @@
 ﻿using GymWebAPI.Data;
 using GymWebAPI.Models;
 using GymWebAPI.Services;
+using GymWebAPI.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -22,6 +23,7 @@ namespace GymWebAPI.Controllers
             _service = service;
         }
 
+        [HttpGet]
         public IActionResult Get()
         {
             try
@@ -64,13 +66,27 @@ namespace GymWebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add()
+        public IActionResult Post([FromBody] TrainingViewModel training)
         {
-            return default;
+            try
+            {
+                var entity = training.ToEnity();
+                _trainings.Add(entity);
+                return Ok(new
+                {
+                    name = entity.Name,
+                    description = entity.Description
+                });
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status400BadRequest,
+                                  e.Message);
+            }
         }
 
-
         [HttpPost]
+        [Route("api/trainings/addSchedules")]
         public IActionResult AddSchedules()
         {
             return default;
