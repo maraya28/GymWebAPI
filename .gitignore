@@ -7,3 +7,4 @@
 /bin/Debug/netcoreapp2.2
 /obj/Debug/netcoreapp2.2
 /obj
+*.dll
