@@ -4,3 +4,6 @@
 
 /.vs/GymWebAPI/v16/Server/sqlite3
 /.vs/GymWebAPI/v16
+/bin/Debug/netcoreapp2.2
+/obj/Debug/netcoreapp2.2
+/obj
