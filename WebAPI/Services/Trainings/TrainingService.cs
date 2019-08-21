@@ -1,5 +1,5 @@
 ﻿
-using GymWebAPI.Data;
+using Data;
 using Models;
 using GymWebAPI.ViewModels;
 using System;

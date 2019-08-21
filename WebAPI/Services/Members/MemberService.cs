@@ -1,4 +1,4 @@
-﻿using GymWebAPI.Data;
+﻿using Data;
 using Models;
 using System;
 using System.Collections.Generic;

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace GymWebAPI.Data
+namespace Data
 {
     public class Repository<T> : IRepository<T> where T : BusinessEntity
     {

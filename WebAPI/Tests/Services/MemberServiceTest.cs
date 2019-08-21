@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using Moq;
 using System.Threading.Tasks;
-using GymWebAPI.Data;
+using Data;
 using Models;
 
 namespace GymWebAPI.Tests
