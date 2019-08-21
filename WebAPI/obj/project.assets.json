@@ -4626,6 +4626,34 @@
         "runtime": {
           "bin/placeholder/Models.dll": {}
         }
+      },
+      "Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Data": "1.0.0",
+          "Models": "1.0.0",
+          "ViewModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.dll": {}
+        }
+      },
+      "ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ViewModels.dll": {}
+        }
       }
     }
   },
@@ -12661,6 +12689,16 @@
       "type": "project",
       "path": "../Models/Models.csproj",
       "msbuildProject": "../Models/Models.csproj"
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "path": "../Services/Services.csproj",
+      "msbuildProject": "../Services/Services.csproj"
+    },
+    "ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../ViewModels/ViewModels.csproj",
+      "msbuildProject": "../ViewModels/ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12671,7 +12709,9 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Models >= 1.0.0",
-      "Moq >= 4.12.0"
+      "Moq >= 4.12.0",
+      "Services >= 1.0.0",
+      "ViewModels >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12709,6 +12749,12 @@
             },
             "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Models\\Models.csproj": {
               "projectPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Models\\Models.csproj"
+            },
+            "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Services\\Services.csproj"
+            },
+            "C:\\Users\\PC\\source\\repos\\GymWebAPI\\ViewModels\\ViewModels.csproj": {
+              "projectPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\ViewModels\\ViewModels.csproj"
             }
           }
         }

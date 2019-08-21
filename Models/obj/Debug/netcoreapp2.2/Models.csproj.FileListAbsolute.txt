@@ -1,6 +1,7 @@
 C:\Users\PC\source\repos\GymWebAPI\Models\bin\Debug\netcoreapp2.2\Models.deps.json
 C:\Users\PC\source\repos\GymWebAPI\Models\bin\Debug\netcoreapp2.2\Models.dll
 C:\Users\PC\source\repos\GymWebAPI\Models\bin\Debug\netcoreapp2.2\Models.pdb
+C:\Users\PC\source\repos\GymWebAPI\Models\obj\Debug\netcoreapp2.2\Models.csprojAssemblyReference.cache
 C:\Users\PC\source\repos\GymWebAPI\Models\obj\Debug\netcoreapp2.2\Models.csproj.CoreCompileInputs.cache
 C:\Users\PC\source\repos\GymWebAPI\Models\obj\Debug\netcoreapp2.2\Models.AssemblyInfoInputs.cache
 C:\Users\PC\source\repos\GymWebAPI\Models\obj\Debug\netcoreapp2.2\Models.AssemblyInfo.cs

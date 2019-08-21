@@ -124,6 +124,124 @@
         }
       }
     },
+    "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Services\\Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Data\\Data.csproj"
+              },
+              "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Models\\Models.csproj"
+              },
+              "C:\\Users\\PC\\source\\repos\\GymWebAPI\\ViewModels\\ViewModels.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\ViewModels\\ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\PC\\source\\repos\\GymWebAPI\\ViewModels\\ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\ViewModels\\ViewModels.csproj",
+        "projectName": "ViewModels",
+        "projectPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\ViewModels\\ViewModels.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Models\\Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "C:\\Users\\PC\\source\\repos\\GymWebAPI\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -155,6 +273,12 @@
               },
               "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Models\\Models.csproj": {
                 "projectPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Models\\Models.csproj"
+              },
+              "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\Services\\Services.csproj"
+              },
+              "C:\\Users\\PC\\source\\repos\\GymWebAPI\\ViewModels\\ViewModels.csproj": {
+                "projectPath": "C:\\Users\\PC\\source\\repos\\GymWebAPI\\ViewModels\\ViewModels.csproj"
               }
             }
           }

@@ -1,7 +1,7 @@
 ﻿using Data;
 using Models;
-using GymWebAPI.Services;
-using GymWebAPI.ViewModels;
+using Services;
+using ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
