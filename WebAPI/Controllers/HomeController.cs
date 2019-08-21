@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using GymWebAPI.Models;
+using Models;
 
 namespace GymWebAPI.Controllers
 {

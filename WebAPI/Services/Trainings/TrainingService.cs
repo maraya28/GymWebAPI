@@ -1,6 +1,6 @@
 ﻿
 using GymWebAPI.Data;
-using GymWebAPI.Models;
+using Models;
 using GymWebAPI.ViewModels;
 using System;
 using System.Collections.Generic;

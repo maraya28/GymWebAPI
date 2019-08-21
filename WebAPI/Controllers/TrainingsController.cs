@@ -1,5 +1,5 @@
 ﻿using GymWebAPI.Data;
-using GymWebAPI.Models;
+using Models;
 using GymWebAPI.Services;
 using GymWebAPI.ViewModels;
 using Microsoft.AspNetCore.Http;

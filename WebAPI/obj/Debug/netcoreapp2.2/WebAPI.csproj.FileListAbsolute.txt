@@ -5,6 +5,9 @@ C:\Users\PC\source\repos\GymWebAPI\WebAPI\bin\Debug\netcoreapp2.2\WebAPI.dll
 C:\Users\PC\source\repos\GymWebAPI\WebAPI\bin\Debug\netcoreapp2.2\WebAPI.pdb
 C:\Users\PC\source\repos\GymWebAPI\WebAPI\bin\Debug\netcoreapp2.2\WebAPI.Views.dll
 C:\Users\PC\source\repos\GymWebAPI\WebAPI\bin\Debug\netcoreapp2.2\WebAPI.Views.pdb
+C:\Users\PC\source\repos\GymWebAPI\WebAPI\bin\Debug\netcoreapp2.2\Models.dll
+C:\Users\PC\source\repos\GymWebAPI\WebAPI\bin\Debug\netcoreapp2.2\Models.pdb
+C:\Users\PC\source\repos\GymWebAPI\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.csprojAssemblyReference.cache
 C:\Users\PC\source\repos\GymWebAPI\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.csproj.CoreCompileInputs.cache
 C:\Users\PC\source\repos\GymWebAPI\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.RazorAssemblyInfo.cache
 C:\Users\PC\source\repos\GymWebAPI\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.RazorAssemblyInfo.cs
@@ -17,6 +20,6 @@ C:\Users\PC\source\repos\GymWebAPI\WebAPI\obj\Debug\netcoreapp2.2\Razor\Views\Ho
 C:\Users\PC\source\repos\GymWebAPI\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.RazorTargetAssemblyInfo.cache
 C:\Users\PC\source\repos\GymWebAPI\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.RazorTargetAssemblyInfo.cs
 C:\Users\PC\source\repos\GymWebAPI\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.Views.pdb
+C:\Users\PC\source\repos\GymWebAPI\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.csproj.CopyComplete
 C:\Users\PC\source\repos\GymWebAPI\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.dll
 C:\Users\PC\source\repos\GymWebAPI\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.pdb
-C:\Users\PC\source\repos\GymWebAPI\WebAPI\obj\Debug\netcoreapp2.2\WebAPI.csproj.CopyComplete

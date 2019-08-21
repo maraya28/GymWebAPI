@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GymWebAPI.Models
+namespace Models
 {
     public class ScheduleEntity : BusinessEntity
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GymWebAPI.Models
+namespace Models
 {
     public abstract class BusinessEntity
     {
