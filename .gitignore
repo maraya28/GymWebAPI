@@ -21,3 +21,9 @@
 /ViewModels/obj/Debug/netcoreapp2.2
 *.dll
 *.cache
+/Models/obj/project.assets.json
+/Models/obj/Models.csproj.nuget.g.targets
+/Models/obj/Models.csproj.nuget.g.props
+/Models/obj/Models.csproj.nuget.dgspec.json
+/Services.Test/obj
+/WebAPI/obj
