@@ -15,9 +15,9 @@
 /Services/obj/Debug/netcoreapp2.2
 /Services.Test/bin/Debug/netcoreapp2.2
 /Services.Test/obj/Debug/netcoreapp2.2
-/Models.Test/bin/Debug/netcoreapp2.2
-/Models.Test/obj/Debug/netcoreapp2.2
-/ViewModels.Test/bin/Debug/netcoreapp2.2
-/ViewModels.Test/obj/Debug/netcoreapp2.2
+/Models/bin/Debug/netcoreapp2.2
+/Models/obj/Debug/netcoreapp2.2
+/ViewModels/bin/Debug/netcoreapp2.2
+/ViewModels/obj/Debug/netcoreapp2.2
 *.dll
 *.cache
