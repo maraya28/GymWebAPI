@@ -1,0 +1,17 @@
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\bin\Debug\netcoreapp2.2\Models.Test.deps.json
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\bin\Debug\netcoreapp2.2\Models.Test.runtimeconfig.json
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\bin\Debug\netcoreapp2.2\Models.Test.runtimeconfig.dev.json
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\bin\Debug\netcoreapp2.2\Models.Test.dll
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\bin\Debug\netcoreapp2.2\Models.Test.pdb
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\bin\Debug\netcoreapp2.2\Models.dll
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\bin\Debug\netcoreapp2.2\Models.pdb
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\obj\Debug\netcoreapp2.2\Models.Test.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\obj\Debug\netcoreapp2.2\Models.Test.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\obj\Debug\netcoreapp2.2\Models.Test.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\obj\Debug\netcoreapp2.2\Models.Test.AssemblyInfo.cs
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\obj\Debug\netcoreapp2.2\Models.Test.csproj.CopyComplete
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\obj\Debug\netcoreapp2.2\Models.Test.dll
+C:\Users\PC\source\repos\GymWebAPI\Models.Test\obj\Debug\netcoreapp2.2\Models.Test.pdb

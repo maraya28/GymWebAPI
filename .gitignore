@@ -27,3 +27,4 @@
 /Models/obj/Models.csproj.nuget.dgspec.json
 /Services.Test/obj
 /WebAPI/obj
+/Models.Test/bin/Debug/netcoreapp2.2

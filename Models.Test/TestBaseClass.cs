@@ -1,4 +1,4 @@
-﻿namespace GymWebAPI.Tests
+﻿namespace  Models.Test
 {
     public abstract class TestBaseClass<T> where T: class
     {
