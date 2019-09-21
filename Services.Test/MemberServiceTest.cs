@@ -23,10 +23,10 @@ namespace Services.Test
         }
 
         [TestClass]
-        public class ValidateMemberMethod : MemberServiceTest
+        public class ValidateMember_Method : MemberServiceTest
         {
             [TestMethod]
-            public void The_input_member_Exist()
+            public void The_input_member_exist()
             {
                 var results = new List<MemberEntity>()
                 {
@@ -41,9 +41,8 @@ namespace Services.Test
                 Target.ValidateMember(id);
             }
 
-
             [TestMethod, ExpectedException(typeof(KeyNotFoundException))]
-            public void The_input_member_Does_Not_Exist()
+            public void The_input_member_does_not_exist()
             {
                 var results = new List<MemberEntity>()
                 {
@@ -63,7 +62,6 @@ namespace Services.Test
                 Target.ValidateMember(id);
             }
 
-
             [TestMethod, ExpectedException(typeof(KeyNotFoundException))]
             public void It_throws_an_error_when_there_is_no_members_loaded()
             {
@@ -73,6 +71,5 @@ namespace Services.Test
                 Target.ValidateMember(id);
             }
         }
-
     }
 }
