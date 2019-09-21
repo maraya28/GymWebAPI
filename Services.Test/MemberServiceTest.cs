@@ -41,6 +41,29 @@ namespace Services.Test
                 Target.ValidateMember(id);
             }
 
+
+            [TestMethod, ExpectedException(typeof(KeyNotFoundException))]
+            public void The_input_member_Does_Not_Exist()
+            {
+                var results = new List<MemberEntity>()
+                {
+                    new MemberEntity.Builder().SetFields(Guid.Parse("C56A4180-65AA-42EC-A945-5FD21DEC0538"),
+                                                         "Carlos Segura",
+                                                          new DateTime(1986,06,12),
+                                                          SeniorityType.Junior).Build(),
+
+                    new MemberEntity.Builder().SetFields(Guid.Parse("C56A4180-65AA-42EC-A945-5FD21DEC0538"),
+                                                         "Fernando Colomo",
+                                                          new DateTime(1977,03,20),
+                                                          SeniorityType.Senior).Build()
+                };
+                _members.Setup(_ => _.GetAll()).Returns(results);
+
+                var id = Guid.Parse("293A5564-E2A0-4840-8D3C-C243DA1B1A8B");
+                Target.ValidateMember(id);
+            }
+
+
             [TestMethod, ExpectedException(typeof(KeyNotFoundException))]
             public void It_throws_an_error_when_there_is_no_members_loaded()
             {
