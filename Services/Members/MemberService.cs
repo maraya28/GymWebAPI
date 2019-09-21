@@ -23,7 +23,7 @@ namespace Services
             if (members != default)
                 exists = members.Any(_ => _.Id == memberId);
             if (exists) return;
-            throw new KeyNotFoundException("The member to update does't exist.");
+            throw new KeyNotFoundException("The member does't exist.");
         }
 
         public int Applydiscount(Guid memberId)

@@ -96,6 +96,7 @@ namespace GymWebAPI.Controllers
         {
             try
             {
+                _service.ValidateMember(id);
                 var member = _members.GetAll().Single(_ => _.Id == id);
                 _members.Delete(member);
                 _members.Save();
