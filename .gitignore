@@ -31,3 +31,6 @@
 /Data/obj
 /ViewModels/obj
 /Services/obj
+/.vs
+/Models/obj/Release/netcoreapp2.2
+/Models.Test/obj/Release/netcoreapp2.2
