@@ -19,6 +19,8 @@
 /Models/obj/Debug/netcoreapp2.2
 /ViewModels/bin/Debug/netcoreapp2.2
 /ViewModels/obj/Debug/netcoreapp2.2
+/Models.Test/bin/Debug/netcoreapp2.2
+/Models.Test/obj/Debug/netcoreapp2.2
 *.dll
 *.cache
 /Models/obj/project.assets.json
@@ -27,10 +29,10 @@
 /Models/obj/Models.csproj.nuget.dgspec.json
 /Services.Test/obj
 /WebAPI/obj
-/Models.Test/bin/Debug/netcoreapp2.2
 /Data/obj
 /ViewModels/obj
 /Services/obj
+/Models.Test/obj
 /.vs
 /Models/obj/Release/netcoreapp2.2
 /Models.Test/obj/Release/netcoreapp2.2
